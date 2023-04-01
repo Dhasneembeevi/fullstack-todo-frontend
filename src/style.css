@@ -1,31 +1,128 @@
-h1{
-    margin: 45px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-button{
-    margin: 20px;
-    height: 45px;
-    width: 75px;
-    border-radius: 10px;
-}
-input{
-    height: 40px;
-    width: fit-content;
-    border-radius: 7px;
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: xx-large;
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-left: 60px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(192, 187, 187);
+    color: black;
 }
 
-.icon{
-    font-size: 29px;
-    cursor: pointer;
+.text {
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 10px;
+    flex-grow: 0.5;
 }
-.todo{
+
+.icons {
     display: flex;
-    font-size: 41px;
-    padding: 15px;
+    align-items: center;
+    gap: 10px;
 }
-.text{
-    margin-right: 100px;
+
+.icon-edit,
+.icon-delete {
+    cursor: pointer;
+    font-size: 24px;
+    color: #210cdb;
+    transition: all 0.2s ease;
 }
-.App{
-    margin: 80px;
+
+.icon-edit:hover {
+    color: #020500;
+}
+
+.icon-delete:hover {
+    color: #dc3545;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+.input-list-box {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: #020500;
+    color: #f6f1f1;
+    border: #020500;
+}
+
+.todo-btn {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    width: 10%;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.todo-btn:hover {
+    background-color: #0732c1;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+    color: #f20707;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+    .todo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    .todo-btn {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        width: 13%;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+body {
+    background-image: url('https://images.pexels.com/photos/4238511/pexels-photo-4238511.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-position: center;
 }
